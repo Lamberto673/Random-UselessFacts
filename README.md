@@ -1,73 +1,123 @@
-# React + TypeScript + Vite
+# 🎵 Random Useless Facts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and modern **React application** that generates random inspirational quotes and optionally plays music tracks from free public APIs. Built to practice **React state management, async fetching, and UI feedback (loading & error states)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* 🔁 Generate random Useless Facts on demand
+* ⏳ Loading & error handling
+* 🎨 Minimal dark UI with clear visual hierarchy
+* ⚡ Fast and lightweight (no backend required)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **React** (Hooks)
+* **TypeScript**
+* **CSS** (custom styling)
+* **Fetch API**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 APIs Used
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Useless Facts
+
+* **Random Useless Facts API**
+  `https://uselessfacts.jsph.pl/api/v2/facts/random`
+
+
+* **uselessfacts** (useless facts only, requires CORS proxy)
+
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Lamberto673/Random-Quote-Generator.git
+cd Random-Quote-Generator
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3️⃣ Start the development server
+
+```bash
+npm run dev
+```
+
+Open your browser at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🧠 How It Works
+
+* Clicking **Generate** triggers an async API call
+* Previous quote is cleared before fetching new data
+* UI updates automatically based on state:
+
+  * `loading` → shows loading text
+  * `error` → shows error message
+  * success → displays quote & author
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── App.jsx
+├── App.css
+├── main.jsx
+└── assets/
+```
+
+---
+
+## 📸 Preview
+
+> *<img width="1152" height="771" alt="image" src="https://github.com/user-attachments/assets/7dfd45b2-ae4b-4f08-b04a-8d81df4ae112" />*
+
+---
+
+## 🧩 Future Improvements
+
+* Smooth fade animation between quotes
+* Background music toggle
+* Random Useless Facts
+* Offline fallback quotes
+* API fallback system
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project.
+
+---
+
+## 🙌 Acknowledgements
+
+* Free public APIs for learning & experimentation
+* React documentation
+* Open-source community
+
+---
+
+⭐ If you found this project helpful, consider giving it a star!
