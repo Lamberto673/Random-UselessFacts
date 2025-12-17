@@ -40,8 +40,8 @@ A clean and modern **React application** that generates random inspirational quo
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/Lamberto673/Random-Quote-Generator.git
-cd Random-Quote-Generator
+git clone https://github.com/Lamberto673/Random-UselessFacts.git
+cd Random-UselessFacts
 ```
 
 ### 2️⃣ Install dependencies
