@@ -1,6 +1,7 @@
 # 🎵 Random Useless Facts
 
 A clean and modern **React application** that generates random inspirational quotes and optionally plays music tracks from free public APIs. Built to practice **React state management, async fetching, and UI feedback (loading & error states)**.
+
 Dont Forget to click the link (https://random-useless-facts-nu.vercel.app)
 ---
 
